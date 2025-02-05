@@ -1,0 +1,8 @@
+:host{
+    display: block;
+    width: auto;
+}
+
+:host > ul > li > img{
+    width: 20px;
+}

@@ -1,0 +1,21 @@
+.parentwrapper{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 30px 50px calc(100vh - 80px);
+}
+
+.mainwrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+main {
+    display: block;
+    min-height: calc(100vh - 110px);
+}
+
+.footer{
+    display: block;
+    height: 30px;
+    margin-bottom: 0;
+}
