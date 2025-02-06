@@ -15,5 +15,4 @@ import {MatDividerModule} from '@angular/material/divider';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'umhipatia';
 }
