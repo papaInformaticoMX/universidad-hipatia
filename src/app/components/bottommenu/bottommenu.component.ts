@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-bottommenu',
-  imports: [],
+  imports: [ RouterLink ],
   templateUrl: './bottommenu.component.html',
   styleUrl: './bottommenu.component.scss',
   standalone: true

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { SwippeComponent } from '../swippe/swippe.component';
+import { SlideComponent } from '../swippe/slide/slide.component';
 
 
 @Component({
   selector: 'app-licenciaturasswipe',
-  imports: [MatCardModule, MatButtonModule],
+  imports: [SwippeComponent, SlideComponent],
   templateUrl: './licenciaturasswipe.component.html',
   styleUrl: './licenciaturasswipe.component.scss'
 })

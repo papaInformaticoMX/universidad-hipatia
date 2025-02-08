@@ -1,4 +1,11 @@
 :host{
-    display: block;
     bottom: 0;
+    min-height: 96px;
 }
+.footer{
+    color: white;
+    background: rgb(1,59,117);
+    background: linear-gradient(180deg, rgba(1,59,117,1) 37%, rgba(60,115,226,1) 100%);
+}
+
+
