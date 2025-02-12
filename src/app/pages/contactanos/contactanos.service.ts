@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpBackend, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -11,6 +11,6 @@ export class ContactanosService {
   sendData(data: any){
     this.http.post(this.endpoint, data).subscribe(res=>{
       console.log(res);
-    });
+    }, error=>{ console.error(error)});
   }
 }
