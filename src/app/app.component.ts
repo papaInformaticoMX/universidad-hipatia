@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {  RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import {  NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TopComponent } from "./components/top/top.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
@@ -14,5 +14,15 @@ import {MatDividerModule} from '@angular/material/divider';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.router.events.subscribe((evt) => {
+        if (!(evt instanceof NavigationEnd)) {
+            return;
+        }
+        window.scrollTo(0, 0)
+    });
+}
 }

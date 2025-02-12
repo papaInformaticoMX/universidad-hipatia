@@ -6,46 +6,30 @@
     </div>
     <div class="w-1/2">
         
-        <form class="example-form">
+        <form  [formGroup]="frmContactanos" (submit)="contactanos(frmContactanos.value)" class="example-form">
 
             <mat-form-field class="example-full-width">
                 <mat-label>Nombre</mat-label>
-                <input type="text" matInput [formControl]=" name" >
-                @if ( name.hasError('required')) {
-                  <mat-error>Nombre es <strong>requirido</strong></mat-error>
-                }
+                <input type="text" matInput formControlName="name" />
               </mat-form-field>
-  
 
             <mat-form-field class="example-full-width">
               <mat-label>Email</mat-label>
-              <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-              @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-                <mat-error>Por favor ingrese un email valido</mat-error>
-              }
-              @if (emailFormControl.hasError('required')) {
-                <mat-error>Email es <strong>requirido</strong></mat-error>
-              }
+              <input type="email" matInput formControlName="email" placeholder="usuario@mail.com">
             </mat-form-field>
-
 
             <mat-form-field class="example-full-width">
                 <mat-label>Celular</mat-label>
-                <input type="number" matInput [formControl]="cel" placeholder="">
-                @if (cel.hasError('required')) {
-                  <mat-error>Celular es <strong>required</strong></mat-error>
-                }
+                <input type="number" matInput formControlName="cel" placeholder="">
             </mat-form-field>
 
 
             <mat-form-field class="example-full-width">
-                <mat-label>Licenciatura</mat-label>
-                <input type="email" matInput [formControl]="licenciatura" placeholder="">
-                @if (licenciatura.hasError('required')) {
-                  <mat-error>Licenciatura es <strong>requerido</strong></mat-error>
-                }
+                <mat-label>Mensaje</mat-label>
+                <textarea matInput formControlName="message"></textarea>
             </mat-form-field>
 
+            <button mat-flat-button extended class="w-full">Enviar formulario</button>
 
           </form>
 
