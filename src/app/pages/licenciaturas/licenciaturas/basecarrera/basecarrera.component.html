@@ -1,0 +1,21 @@
+<div class="my-3">
+    <h1 class="text-4xl mb-2">{{carrera}}</h1>
+    <p innerHTML="{{introCarrera}}"></p>
+
+    <div class="my-3 pt-3" *ngIf="perfilAspirante">
+        <h2 class="text-2xl mb-1">Perfil del aspirante.</h2>
+        <p innerHTML="{{perfilAspirante}}"></p>
+    </div>
+    <div class="my-3 pt-3" *ngIf="aprendizaje">
+        <h2 class="text-2xl mb-1">¿Qué aprenderás?</h2>
+        <p innerHTML="{{aprendizaje}}"></p>
+    </div>
+    <div class="my-3 pt-3" *ngIf="perfilEgresado">
+        <h2 class="text-2xl mb-1">Perfil del egresado</h2>
+        <p innerHTML="{{perfilEgresado}}"></p>
+    </div>
+    <div class="my-3 pt-3" *ngIf="empleabilidad">
+        <h2 class="text-2xl mb-1">Empleabilidad o campo de trabajo (¿Dónde podrás trabajar?)</h2>
+        <p innerHTML="{{empleabilidad}}"></p>
+    </div>
+</div>

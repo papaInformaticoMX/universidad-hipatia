@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     { path:'', loadComponent: () => import('./pages/home/home.component').then(mod => mod.HomeComponent)},
     { path:'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(mod => mod.NosotrosComponent)},
-    { path:'licenciaturas', loadComponent: () => import('./pages/licenciaturas/licenciaturas.component').then(mod => mod.LicenciaturasComponent)},
+    { path:'licenciaturas', loadChildren: () => import('./pages/licenciaturas/licenciaturas.routes.const').then(mod => mod.LicenciaturasRoutesConst)},
     { path:'contactanos', loadComponent: () => import('./pages/contactanos/contactanos.component').then(mod => mod.ContactanosComponent)},
     { path:'visitanos',loadComponent: () => import('./pages/visitanos/visitanos.component').then(mod => mod.VisitanosComponent)},
     { path:'aviso-de-privacidad',loadComponent: () => import('./pages/aviso-privacidad/aviso-privacidad.component').then(mod => mod.AvisoPrivacidadComponent)},
