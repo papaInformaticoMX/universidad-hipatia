@@ -1,11 +1,16 @@
 <h1 class="text-4xl text-center pb-5">Contáctanos</h1>
 
+    <!--  -->
+
 <div class="flex">
     <div class="w-1/2">
         <img src="pages/contactanos/contactanos.jpg" />
     </div>
     <div class="w-1/2">
-        
+        <div *ngIf="statusForm() != 'Enviar'"  class="p-2  example-form mb-2 text-sm text-blue-800 rounded-lg bg-blue-50" role="alert">
+            <span [innerHTML]="statusForm()" ></span>
+          </div>
+                
         <form  [formGroup]="frmContactanos" (submit)="contactanos(frmContactanos.value)" class="example-form">
 
             <mat-form-field class="example-full-width">
@@ -29,7 +34,7 @@
                 <textarea matInput formControlName="message"></textarea>
             </mat-form-field>
 
-            <button mat-flat-button extended class="w-full">Enviar formulario</button>
+            <button [disabled]="btnStatus() || frmContactanos.invalid" mat-flat-button extended class="w-full" [innerHTML]="statusForm()"></button>
 
           </form>
 
