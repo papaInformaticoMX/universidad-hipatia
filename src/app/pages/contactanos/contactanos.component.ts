@@ -36,12 +36,12 @@ export class ContactanosComponent {
     this.contactServices.sendData(data).subscribe({
       next: (resp)=>{
         debugger;
-        this._snackBar.open("Nos pondremos en contacto contigo en la brevedad");
+        this._snackBar.open("En breve recibirás atención de un representante.");
         this.frmContactanos.reset({name:'', email:'', cel:'', message:''});
       },
       error: console.error,
       complete:()=>{
-        this.statusForm.set("Enviado");
+        this.statusForm.set("En breve recibirás atención de un representante.");
         setTimeout(()=>{
           this.statusForm.set("Enviar");
         }, 3000)

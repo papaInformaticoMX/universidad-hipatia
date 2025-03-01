@@ -3,6 +3,7 @@ import { LicmnuComponent } from './components/licmnu/licmnu.component';
 import { LicenciaturasEnum } from './enums/licenciaturas.enum';
 import { CommonModule } from '@angular/common';
 import { LicenciaturasRoutesModule } from './licenciaturas.routes.module';
+import { CompromisoEducativoComponent } from './components/compromiso-educativo/compromiso-educativo.component';
 
 @Component({
   selector: 'app-licenciaturas',

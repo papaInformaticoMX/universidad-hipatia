@@ -20,7 +20,7 @@ export class InscribirteboxComponent {
       name : new FormControl('', [Validators.required]),
       email : new FormControl('', [Validators.required, Validators.email]),
       cel : new FormControl('', [Validators.required]),
-      message : new FormControl('', [Validators.required])
+      carrera : new FormControl('', [Validators.required])
     });
   
     btnStatus = computed(()=> this.statusForm() == "<i>Enviando....</i>");
@@ -35,12 +35,12 @@ export class InscribirteboxComponent {
       this.contactServices.sendData(data).subscribe({
         next: (resp)=>{
           debugger;
-          this._snackBar.open("Nos pondremos en contacto contigo en la brevedad");
-          this.frmContactanos.reset({name:'', email:'', cel:'', message:''});
+          this._snackBar.open("En breve recibirás atención de un representante.");
+          this.frmContactanos.reset({name:'', email:'', cel:'', carrera:''});
         },
         error: console.error,
         complete:()=>{
-          this.statusForm.set("Enviado");
+          this.statusForm.set("En breve recibirás atención de un representante.");
           setTimeout(()=>{
             this.statusForm.set("Enviar");
           }, 3000)

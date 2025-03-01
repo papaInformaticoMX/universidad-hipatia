@@ -1,16 +1,13 @@
-<h1 class="text-4xl text-center pb-5">Contáctanos</h1>
-
-    <!--  -->
-
 <div class="flex">
-    <div class="w-1/2">
-        <img src="pages/contactanos/contactanos.jpg" />
+    <div class="w-1/2 ">
+      <div class=" rounded-xl bg-[url(/pages/contactanos/contactanos.jpg)] mx-auto h-96 min-w-sm max-w-lg  bg-cover bg-center"></div>
     </div>
     <div class="w-1/2">
+      <div class="mx-auto">
+        <h2 class="text-3xl pb-1">Inscribete</h2>
         <div *ngIf="statusForm() != 'Enviar'"  class="p-2  example-form mb-2 text-sm text-blue-800 rounded-lg bg-blue-50" role="alert">
-            <span [innerHTML]="statusForm()" ></span>
-          </div>
-                
+          <span [innerHTML]="statusForm()" ></span>
+        </div>    
         <form  [formGroup]="frmContactanos" (submit)="contactanos(frmContactanos.value)" class="example-form">
 
             <mat-form-field class="example-full-width">
@@ -28,16 +25,19 @@
                 <input type="number" matInput formControlName="cel" placeholder="">
             </mat-form-field>
 
-
             <mat-form-field class="example-full-width">
-                <mat-label>Mensaje</mat-label>
-                <textarea matInput formControlName="message"></textarea>
+              <mat-label>Carrera</mat-label>
+              <input type="text" matInput formControlName="carrera" placeholder="Carrera de interes">
             </mat-form-field>
 
-            <button [disabled]="btnStatus() || frmContactanos.invalid" mat-flat-button extended class="w-full" [innerHTML]="statusForm()"></button>
+            <button
+              class="w-full py-10" 
+              [disabled]="btnStatus() || frmContactanos.invalid" 
+              mat-flat-button 
+              extended  [innerHTML]="statusForm()"></button>
 
           </form>
-
+      </div>
     </div>
 </div>
 

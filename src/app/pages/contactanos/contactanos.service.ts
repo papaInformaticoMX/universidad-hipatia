@@ -12,4 +12,6 @@ export class ContactanosService {
     data["fecha"]= new Date();
     return this.http.post(this.endpoint, data);
   }
+
+  
 }
