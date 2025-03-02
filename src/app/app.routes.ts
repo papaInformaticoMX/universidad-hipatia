@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [
+export const appRoutes: Routes = [
     { path:'', loadComponent: () => import('./pages/home/home.component').then(mod => mod.HomeComponent)},
     { path:'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(mod => mod.NosotrosComponent)},
     { path:'licenciaturas', loadChildren: () => import('./pages/licenciaturas/licenciaturas.routes.const').then(mod => mod.LicenciaturasRoutesConst)},
