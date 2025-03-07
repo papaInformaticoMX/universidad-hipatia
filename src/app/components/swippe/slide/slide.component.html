@@ -1,8 +1,11 @@
-<mat-card class="cardlic" appearance="outlined">
+<!-- <mat-card class="cardlic h-[725px] h420" appearance="outlined">-->
+<mat-card 
+    class="min-w-2xs sm:min-w-sm max-w-md min-h-80 max-h-96 mb-5" 
+    appearance="outlined">
     <mat-card-content>
-        <img src="{{imagen}}" width="w-full" />
+        <img src="{{imagen}}" width="50px"  class="block mx-auto"/>
         <h3 class="text-center text-2xl mt-2 mb-2">{{titulo}}</h3>
-        <p class="text-justify"><ng-content></ng-content></p>
+        <p class="text-justify min-h-40"><ng-content></ng-content></p>
         <p class="text-center mt-4"><a mat-flat-button routerLink="{{link}}" target="_self">Conocer más</a></p>
     </mat-card-content>
 </mat-card>
