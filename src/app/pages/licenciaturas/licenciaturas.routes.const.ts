@@ -35,10 +35,6 @@ export const LicenciaturasRoutesConst: Routes = [
       loadComponent:()=>import('./licenciaturas/seguridad/seguridad.component').then(a => a.SeguridadComponent),
     },
     {
-      path: 'marketing',
-      loadComponent: ()=>import('./licenciaturas/marketing/marketing.component').then(a => a.MarketingComponent),
-    },
-    {
       path: 'comunicacion',
       loadComponent: ()=>import('./licenciaturas/comunicacion/comunicacion.component').then(a => a.ComunicacionComponent),
     }

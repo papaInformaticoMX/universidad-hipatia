@@ -5,6 +5,5 @@ export enum LicenciaturasEnum{
     enfermeria = "Enfermería",
     odontologia = "Odontología",
     seguridad = "Seguridad",
-    marketing = "Marketing",
     comunicacion = "Comunicación"
 }
